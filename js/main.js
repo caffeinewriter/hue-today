@@ -14,12 +14,12 @@ function computeYIQ() {
 }
 
 function updateColor() {
-  console.log("Update color");
   let colorInput = document.querySelector("#color");
   document.querySelector("body").style.background = colorInput.value;
   let yiqRes = computeYIQ();
   document.querySelector("#color").style.color = yiqRes;
   document.querySelector("#color").style.borderBottomColor = yiqRes;
+  document.location.hash = document.querySelector("#color").value;
 }
 
 function updateHash() {
